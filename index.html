@@ -40,15 +40,31 @@
             background: #D4AF37;
             border-radius: 10px;
         }
-        .hide-scrollbar::-webkit-scrollbar {
-            display: none;
-        }
         .hide-scrollbar {
             -ms-overflow-style: none;
             scrollbar-width: none;
         }
-        .proof-scroll-container {
-            mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        
+        /* High Definition Image Sharpening - Optimized for Screenshots */
+        .render-hd {
+            image-rendering: -webkit-optimize-contrast;
+            image-rendering: crisp-edges;
+            filter: contrast(1.05) brightness(1.02);
+            -webkit-font-smoothing: antialiased;
+            transform: translateZ(0);
+            backface-visibility: hidden;
+        }
+        
+        /* Smooth Scroll for Proofs */
+        .proof-container {
+            display: flex;
+            overflow-x: auto;
+            gap: 15px;
+            padding: 20px;
+            scroll-snap-type: x mandatory;
         }
     </style>
 <script type="importmap">
