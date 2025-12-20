@@ -1,0 +1,8 @@
+{
+  "name": "TOP 1% CLUB FX",
+  "description": "Institutional Trading Elite landing page featuring smart money concepts, real-time member profit proofs, and an AI-powered trading assistant.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
