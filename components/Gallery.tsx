@@ -25,9 +25,10 @@ const Gallery: React.FC = () => {
               <div className="h-[320px] md:h-[450px] w-full flex items-center justify-center bg-[#050505] relative overflow-hidden">
                 <img 
                   src={proof.image} 
-                  alt="Institutional Proof" 
+                  alt={`Proof of Profit ${proof.profit} by ${proof.name}`} 
                   className="w-full h-full object-contain render-hd block"
                   loading="lazy"
+                  decoding="async"
                 />
                 <div className="absolute inset-0 bg-gradient-to-tr from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
               </div>
@@ -60,8 +61,13 @@ const Gallery: React.FC = () => {
           className="fixed inset-0 z-[100] bg-black/98 flex items-center justify-center p-4 animate-in fade-in duration-200"
           onClick={() => setSelectedImage(null)}
         >
-          <button className="absolute top-4 right-4 text-white text-4xl hover:text-yellow-500 transition-colors">&times;</button>
-          <img src={selectedImage} className="max-w-full max-h-[90vh] object-contain shadow-2xl render-hd" />
+          <button className="absolute top-4 right-4 text-white text-4xl hover:text-yellow-500 transition-colors" aria-label="Close modal">&times;</button>
+          <img 
+            src={selectedImage} 
+            alt="Enlarged Profit Proof" 
+            className="max-w-full max-h-[90vh] object-contain shadow-2xl render-hd" 
+            decoding="async"
+          />
         </div>
       )}
 

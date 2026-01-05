@@ -2,7 +2,7 @@
 import { MemberProof } from './types';
 
 export const WHATSAPP_NUMBER = "919993384045";
-export const VIP_GROUP_LINK = "https://chat.whatsapp.com/F5Sb4Lr0K9B4vKuaUkpjMP";
+export const VIP_GROUP_LINK = "https://chat.whatsapp.com/JVc7QwMG9wgLWN0i0lJrie";
 
 export const MEMBER_PROOFS: MemberProof[] = [
   { id: 1, name: "SMC WIN", profit: "$2,482", image: "https://i.ibb.co/G4zYJznF/Whats-App-Image-2025-12-19-at-3-25-13-PM.webp", timestamp: "LIVE" },

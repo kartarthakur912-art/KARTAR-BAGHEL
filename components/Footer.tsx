@@ -9,8 +9,12 @@ const Footer: React.FC = () => {
           <div className="h-16 w-16 md:h-24 md:w-24 rounded-full border border-yellow-500/20 overflow-hidden bg-black p-0.5 opacity-60 hover:opacity-100 transition-all">
             <img 
               src="https://i.ibb.co/h1LRKw3z/Screenshot-2025-12-30-111039.png" 
-              alt="Logo" 
+              alt="TOP 1% CLUB FX Logo Footer" 
               className="h-full w-full object-cover rounded-full render-hd"
+              loading="lazy"
+              decoding="async"
+              width="96"
+              height="96"
             />
           </div>
         </div>
