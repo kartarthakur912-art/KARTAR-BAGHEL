@@ -6,6 +6,7 @@ import SocialProof from './components/SocialProof';
 import Gallery from './components/Gallery';
 import ContactForm from './components/ContactForm';
 import Footer from './components/Footer';
+import WhatsAppPopup from './components/WhatsAppPopup';
 
 const App: React.FC = () => {
   useEffect(() => {
@@ -13,7 +14,7 @@ const App: React.FC = () => {
   }, []);
 
   return (
-    <div className="min-h-screen selection:bg-yellow-500 selection:text-black">
+    <div className="min-h-screen selection:bg-yellow-500 selection:text-black bg-[#050505]">
       <Timer />
       <main>
         <Hero />
@@ -22,6 +23,7 @@ const App: React.FC = () => {
         <ContactForm />
       </main>
       <Footer />
+      <WhatsAppPopup />
     </div>
   );
 };

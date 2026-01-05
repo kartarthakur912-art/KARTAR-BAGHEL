@@ -1,7 +1,7 @@
 
 import { MemberProof } from './types';
 
-export const WHATSAPP_NUMBER = "919752670746";
+export const WHATSAPP_NUMBER = "919993384045";
 export const VIP_GROUP_LINK = "https://chat.whatsapp.com/F5Sb4Lr0K9B4vKuaUkpjMP";
 
 export const MEMBER_PROOFS: MemberProof[] = [
