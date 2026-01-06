@@ -4,7 +4,6 @@ import Timer from './components/Timer';
 import Hero from './components/Hero';
 import Brokers from './components/Brokers';
 import IndicatorSection from './components/IndicatorSection';
-import Gallery from './components/Gallery';
 import ContactForm from './components/ContactForm';
 import Footer from './components/Footer';
 import WhatsAppPopup from './components/WhatsAppPopup';
@@ -23,7 +22,6 @@ const App: React.FC = () => {
         <Hero />
         <IndicatorSection />
         <Brokers />
-        <Gallery />
         <ContactForm />
       </main>
       <Footer />
