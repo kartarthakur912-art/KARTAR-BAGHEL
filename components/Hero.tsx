@@ -22,7 +22,7 @@ const Hero: React.FC = () => {
         <div className="relative z-10 w-40 h-40 md:w-64 md:h-64 rounded-full border-[2px] md:border-[3px] border-yellow-500/40 p-1 bg-black shadow-[0_0_30px_rgba(212,175,55,0.2)] md:shadow-[0_0_50px_rgba(212,175,55,0.3)] overflow-hidden group-hover:border-yellow-500 transition-colors duration-500">
           <img 
             src="https://i.ibb.co/h1LRKw3z/Screenshot-2025-12-30-111039.png" 
-            alt="TOP 1% CLUB FX Official Logo" 
+            alt="SMART INVESTORS CLUB Logo" 
             className="w-full h-full object-cover rounded-full render-hd group-hover:scale-110 transition-transform duration-700"
             loading="eager"
             decoding="async"
@@ -43,9 +43,8 @@ const Hero: React.FC = () => {
         </div>
       </div>
 
-      <h1 className="text-3xl md:text-7xl font-black tracking-tighter uppercase leading-[1] md:leading-[0.9] mb-4 md:mb-6">
-        <span className="text-white/90 text-2xl md:text-5xl block mb-2">Welcome To</span>
-        <span className="gold-gradient">SMART INVESTORS CLUB</span>
+      <h1 className="text-4xl md:text-8xl font-black tracking-tighter uppercase leading-[0.9] mb-4 md:mb-6">
+        <span className="gold-gradient block">SMART INVESTORS CLUB</span>
       </h1>
       <p className="text-gray-400 text-base md:text-2xl max-w-2xl mb-8 md:mb-12 italic font-light">
         "Stop being the liquidity. Follow the Institutional Banks with Smart Money Concepts."
