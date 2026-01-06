@@ -4,6 +4,12 @@ import { MemberProof } from './types';
 export const WHATSAPP_NUMBER = "919993384045";
 export const VIP_GROUP_LINK = "https://chat.whatsapp.com/JVc7QwMG9wgLWN0i0lJrie";
 
+export const BROKER_LINKS = {
+  WINPRO_FX: "https://my.winprofx.com/register?promo=KAR21100588",
+  XM: "https://clicks.pipaffiliates.com/c?c=...",
+  EXNESS: "https://one.exnessonelink.com/a/2ae0pyaih7"
+};
+
 export const MEMBER_PROOFS: MemberProof[] = [
   { id: 1, name: "SMC WIN", profit: "$2,482", image: "https://i.ibb.co/G4zYJznF/Whats-App-Image-2025-12-19-at-3-25-13-PM.webp", timestamp: "LIVE" },
   { id: 2, name: "GOLD SCALP", profit: "$1,120", image: "https://i.ibb.co/h1XQ209c/photo-2025-12-05-11-44-16.webp", timestamp: "VERIFIED" },

@@ -2,6 +2,8 @@
 import React, { useEffect } from 'react';
 import Timer from './components/Timer';
 import Hero from './components/Hero';
+import Brokers from './components/Brokers';
+import IndicatorSection from './components/IndicatorSection';
 import Gallery from './components/Gallery';
 import ContactForm from './components/ContactForm';
 import Footer from './components/Footer';
@@ -17,6 +19,8 @@ const App: React.FC = () => {
       <Timer />
       <main>
         <Hero />
+        <IndicatorSection />
+        <Brokers />
         <Gallery />
         <ContactForm />
       </main>
