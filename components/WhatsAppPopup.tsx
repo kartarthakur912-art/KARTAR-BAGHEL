@@ -1,6 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { VIP_GROUP_LINK } from '../constants';
+import { trackLead } from '../services/analytics';
 
 const WhatsAppPopup: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -32,6 +33,7 @@ const WhatsAppPopup: React.FC = () => {
           href={VIP_GROUP_LINK}
           target="_blank"
           rel="noopener noreferrer"
+          onClick={() => trackLead('Floating Popup')}
           className="flex items-center justify-center w-16 h-16 md:w-20 md:h-20 bg-[#25D366] rounded-full shadow-[0_15px_40px_rgba(37,211,102,0.4)] hover:scale-110 active:scale-95 transition-all relative border-2 border-white/10"
           aria-label="Join WhatsApp Group"
         >

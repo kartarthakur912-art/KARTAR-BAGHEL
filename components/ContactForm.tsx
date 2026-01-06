@@ -1,6 +1,7 @@
 
 import React, { useState } from 'react';
 import { WHATSAPP_NUMBER } from '../constants';
+import { trackContact } from '../services/analytics';
 
 const ContactForm: React.FC = () => {
   const [waNumber, setWaNumber] = useState('');
@@ -11,6 +12,9 @@ const ContactForm: React.FC = () => {
       alert("Please fill in your details.");
       return;
     }
+    
+    trackContact();
+    
     const text = encodeURIComponent(`🚀 *ELITE LEAD CAPTURED* 🚀\n\n👤 *Client:* ${waNumber}\n💬 *Query:* ${waMsg}\n\n_Sent via Top 1% Club FX Landing Page_`);
     window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${text}`, '_blank');
   };
@@ -18,7 +22,6 @@ const ContactForm: React.FC = () => {
   return (
     <section className="py-12 md:py-24 bg-[#080808] px-6 border-t border-gray-900">
       <div className="max-w-xl mx-auto">
-        {/* Priority Support Card - Now Centered and Primary */}
         <div className="glass p-6 md:p-12 rounded-[24px] md:rounded-[32px] border-yellow-600/20 shadow-2xl relative">
           <div className="absolute -top-3 right-6 bg-green-600 text-[8px] md:text-[10px] font-black px-2 py-1 rounded-full animate-pulse shadow-lg">
             EXPERT ONLINE

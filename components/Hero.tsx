@@ -1,6 +1,7 @@
 
 import React, { useState } from 'react';
 import { VIP_GROUP_LINK } from '../constants';
+import { trackLead } from '../services/analytics';
 
 const Hero: React.FC = () => {
   const [copied, setCopied] = useState(false);
@@ -55,6 +56,7 @@ const Hero: React.FC = () => {
           href={VIP_GROUP_LINK}
           target="_blank"
           rel="noopener noreferrer"
+          onClick={() => trackLead('Hero Join Button')}
           className="btn-gold py-4 md:py-6 px-8 md:px-12 rounded-full text-lg md:text-2xl text-black font-black uppercase tracking-tighter shadow-xl hover:scale-105 transition-transform w-full md:w-auto text-center"
         >
           Join VIP WhatsApp

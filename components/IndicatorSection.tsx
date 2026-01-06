@@ -1,15 +1,9 @@
 
 import React from 'react';
 import { VIP_GROUP_LINK } from '../constants';
+import { trackLead } from '../services/analytics';
 
 const IndicatorSection: React.FC = () => {
-  const features = [
-    "Non-Repaint Signals",
-    "FVG Scanner",
-    "Order Block Detection",
-    "Liquidity Sweep Alerts"
-  ];
-
   return (
     <section className="py-20 md:py-32 bg-[#080808] relative overflow-hidden">
       {/* Decorative background flare */}
@@ -28,21 +22,9 @@ const IndicatorSection: React.FC = () => {
         </h2>
         
         {/* Description */}
-        <p className="text-gray-400 text-base md:text-2xl font-light italic mb-12 leading-relaxed max-w-2xl mx-auto">
+        <p className="text-gray-400 text-base md:text-2xl font-light italic mb-14 leading-relaxed max-w-2xl mx-auto">
           "Stop being the liquidity. Our TradingView algorithm tracks bank volume in real-time, delivering institutional-grade entries directly to your chart."
         </p>
-
-        {/* Feature Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-14 max-w-2xl mx-auto">
-          {features.map((feat, i) => (
-            <div key={i} className="flex items-center justify-center gap-3 bg-white/5 border border-white/5 p-4 rounded-2xl hover:border-yellow-500/20 transition-all group">
-              <svg className="w-5 h-5 text-yellow-500 group-hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-              </svg>
-              <span className="text-xs md:text-sm font-black text-gray-300 uppercase tracking-widest">{feat}</span>
-            </div>
-          ))}
-        </div>
 
         {/* Action Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -50,6 +32,7 @@ const IndicatorSection: React.FC = () => {
             href={VIP_GROUP_LINK}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => trackLead('Indicator Section Button')}
             className="btn-gold w-full sm:w-auto py-5 px-12 rounded-2xl text-black font-black uppercase text-lg md:text-xl shadow-[0_0_30px_rgba(212,175,55,0.2)] hover:scale-105 transition-transform"
           >
             Claim Free Access

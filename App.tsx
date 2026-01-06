@@ -8,10 +8,12 @@ import Gallery from './components/Gallery';
 import ContactForm from './components/ContactForm';
 import Footer from './components/Footer';
 import WhatsAppPopup from './components/WhatsAppPopup';
+import { initPixel } from './services/analytics';
 
 const App: React.FC = () => {
   useEffect(() => {
     document.documentElement.style.scrollBehavior = 'smooth';
+    initPixel();
   }, []);
 
   return (

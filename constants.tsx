@@ -3,6 +3,7 @@ import { MemberProof } from './types';
 
 export const WHATSAPP_NUMBER = "919993384045";
 export const VIP_GROUP_LINK = "https://chat.whatsapp.com/JVc7QwMG9wgLWN0i0lJrie";
+export const META_PIXEL_ID = "YOUR_PIXEL_ID_HERE"; // Replace with your actual Meta Pixel ID
 
 export const BROKER_LINKS = {
   WINPRO_FX: "https://my.winprofx.com/register?promo=KAR21100588",
