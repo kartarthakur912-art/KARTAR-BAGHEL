@@ -5,6 +5,7 @@ import { trackLead } from '../services/analytics';
 
 const Hero: React.FC = () => {
   const [copied, setCopied] = useState(false);
+  const [imgLoaded, setImgLoaded] = useState(false);
 
   const copyLink = () => {
     navigator.clipboard.writeText(VIP_GROUP_LINK);
@@ -16,15 +17,16 @@ const Hero: React.FC = () => {
     <section className="min-h-[90vh] flex flex-col items-center justify-center px-6 text-center relative overflow-hidden pt-8 md:pt-10">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] md:w-[600px] h-[300px] md:h-[600px] bg-yellow-600/10 blur-[120px] md:blur-[180px] rounded-full"></div>
 
-      {/* Circular Brand Logo - Scaled for mobile */}
+      {/* Circular Brand Logo */}
       <div className="mb-6 md:mb-10 relative group">
         <div className="absolute inset-0 bg-yellow-500/20 blur-3xl rounded-full scale-110 group-hover:bg-yellow-500/35 transition-all duration-700"></div>
         
-        <div className="relative z-10 w-40 h-40 md:w-64 md:h-64 rounded-full border-[2px] md:border-[3px] border-yellow-500/40 p-1 bg-black shadow-[0_0_30px_rgba(212,175,55,0.2)] md:shadow-[0_0_50px_rgba(212,175,55,0.3)] overflow-hidden group-hover:border-yellow-500 transition-colors duration-500">
+        <div className={`relative z-10 w-40 h-40 md:w-64 md:h-64 rounded-full border-[2px] md:border-[3px] border-yellow-500/40 p-1 bg-black shadow-[0_0_30px_rgba(212,175,55,0.2)] md:shadow-[0_0_50px_rgba(212,175,55,0.3)] overflow-hidden group-hover:border-yellow-500 transition-colors duration-500 ${!imgLoaded ? 'skeleton' : ''}`}>
           <img 
             src="https://i.ibb.co/h1LRKw3z/Screenshot-2025-12-30-111039.png" 
             alt="SMART INVESTORS CLUB Logo" 
-            className="w-full h-full object-cover rounded-full render-hd group-hover:scale-110 transition-transform duration-700"
+            className={`w-full h-full object-cover rounded-full render-hd group-hover:scale-110 transition-all duration-700 ${imgLoaded ? 'opacity-100' : 'opacity-0'}`}
+            onLoad={() => setImgLoaded(true)}
             loading="eager"
             decoding="async"
             width="256"
